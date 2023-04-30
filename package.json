@@ -1,0 +1,32 @@
+{
+  "name": "ambient_node",
+  "version": "1.0.0",
+  "description": "meu primeiro app em node.js",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/glauberspinheiro/project-node.git"
+  },
+  "keywords": [
+    "mynode"
+  ],
+  "author": "Glauber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glauberspinheiro/project-node/issues"
+  },
+  "homepage": "https://github.com/glauberspinheiro/project-node#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "node_module": "^0.0.0",
+    "nodemon": "^2.0.22",
+    "pg": "^8.10.0"
+  }
+}
