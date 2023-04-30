@@ -1,13 +1,13 @@
 const express = require('express')
 const routes = express.Router()
-const Client = require('pg').Client
+/*const Client = require('pg').Client
 const cli = new Client({
     user: "postgres",
     password: "Foda@2015",
     host: "localhost",
     port: 5432,
     database: "project-nodeJs"
-})
+})*/
 
 let banco =[
     {'1': { nome: 'GLAUBER PINHEIRO', email: 'glauber@gmail.com', cpf: '01575025620'}},
@@ -74,11 +74,12 @@ routes.get('/buscar/:id', (req, res) =>{
 
     return res.json(nBanco)
 })
-routes.use(Client())
+
+/*routes.use(Client())
 dbacesso.connect()
 dbacesso.query("select * from cidade").then(results => {
     const resultado = results.rows
     console.log(resultado)
 })
-.finally(() => dbacesso.end())
+.finally(() => dbacesso.end())*/
 module.exports =routes
