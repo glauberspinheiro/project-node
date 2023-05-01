@@ -1,0 +1,15 @@
+{
+    "nome" : "ambient_node",
+    "version" : 2,
+    "public": true,
+    "build": {
+        "src": "index.js",
+        "user":"@vercel/node"
+    },
+    "routes": [
+            {
+                "src": "/(.*)",
+                "dest": "index.js"
+            }
+        ]
+}
