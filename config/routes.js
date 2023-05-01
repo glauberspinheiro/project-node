@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+
 /*const Client = require('pg').Client
 const cli = new Client({
     user: "postgres",
@@ -30,7 +31,7 @@ let bancoPessoa =[
     {id: '6', nome: 'EDERSON JONES DA SILVA PINHEIRO', email: 'glauber@gmail.com', cpf: '01575025620'},
     {id: '7', nome: 'THALILIAN ALVES', email: 'glauber@gmail.com', cpf: '01575025620'},    
 ]
-//37:36
+
 console.table(bancoPessoa)
 
 //buscar dados
@@ -48,7 +49,7 @@ routes.post('/adicionar', (req, res) =>{
     banco.push(body)
         return res.json(body)
 })
-
+//deletar arquivos por id
 routes.delete('/deletar/:id', (req, res) =>{
     const id = req.params.id
 
@@ -62,17 +63,18 @@ routes.delete('/deletar/:id', (req, res) =>{
     return res.send(nBanco)
 })
 
+//buscar informação por id
 routes.get('/buscar/:id', (req, res) =>{
     const id = req.params.id
 
-    let nBanco = banco.filter(item =>{
-        if(item[id])
+    let dbanco = banco.filter(item =>{
+        if(!item[id])
             return item
     })
 
-    banco = nBanco
+    banco = dbanco
 
-    return res.json(nBanco)
+    return res.json(dbanco)
 })
 
 /*routes.use(Client())
