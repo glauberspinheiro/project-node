@@ -12,7 +12,7 @@ app.use(cors())
 app.use(routes)
 
 app.get('/', function(req, res){
-    res.send('Olá Mundo!')
+    res.sendFile(__dirname + "/src/index.html")
 })
 
 app.listen(8000, function(){
