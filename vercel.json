@@ -1,5 +1,5 @@
 {
-    "nome" : "ambient_node",
+    "name" : "ambient_node",
     "version" : 2,
     "public": true,
     "build": {
