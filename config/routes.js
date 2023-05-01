@@ -76,7 +76,23 @@ routes.get('/buscar/:id', (req, res) =>{
 
     return res.json(dbanco)
 })
+/*
+async function contacaoDolar(req, res){
+    const dataAtualCotacao = new Date();
 
+    const contacaoResp = await fetch("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao='04-28-2023'&$top=100&$format=json&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao")
+    const cotacaoRespJson = await  contacaoResp.json()
+    const valorCompra = cotacaoRespJson.cotacaoCompra
+    const valorVompra = cotacaoRespJson.cotacaoVenda
+    const dataHCotacao = cotacaoRespJson.dataHoraCotacao
+
+    return res.json({
+        dataAtual: dataAtualCotacao.toGMTString()
+        valorCompra: valorCompra
+        valorRVompra: valorVompra
+        cotadoEm: dataHCotacao.toGMTString()
+    })
+}*/
 /*routes.use(Client())
 dbacesso.connect()
 dbacesso.query("select * from cidade").then(results => {
