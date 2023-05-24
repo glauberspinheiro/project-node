@@ -21,9 +21,35 @@
          <p>_____________________________________________</p>
         <a href="https://newsolutionsit.atlassian.net/jira/core/projects/CX/board?quickFilters=ASSIGNED_TO_ME0" target="_blank"><button value="link" onclick="Solicitacao()">Tela de Tarefas Glauber</button></a>
 		</div>
+        <div align="center"><h2>Busca - CEP</h2>
+            <form>
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" class="form-control" id="cep">
+                    <small>Digite como no exemplo:00000-000</small>
+                </div>
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" class="form-control" id="bairro">
+                    <small>Confirme se esse é o bairro correto.</small>
+                </div>
+                <div class="form-group">
+                    <label for="localidade">Localidade:</label>
+                    <input type="text" class="form-control" id="localidade">
+                    <small>Confirme se esse a localidade está correta.</small>
+                </div>
+                <div class="form-group">
+                    <label for="uf">UF:</label>
+                    <input type="text" class="form-control" id="uf">
+                    <small>Confirme se esse a UF está correta.</small>
+                </div>
+            </form>
+        </div>
 
         <div class="webchat" id="webchat" data-chat-token="7cbbe30e-f5b9-4cf7-96f4-21e2eb789383" data-chat-theme="green">
             <div id="webchat-app"></div></div>
             <script src="https://staging.bemoby.com/webchat/webchat.js"></script>
+
+        <script src="/config/routes.js"></script>
     </body>
 </html>
