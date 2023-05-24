@@ -1,39 +1,5 @@
 const express = require('express')
 const routes = express.Router()
-//buscar dados
-routes.get('/buscar', (req, res) => {
-    return res.json(banco)
-})
-
-//postar dados
-routes.post('/adicionar', (req, res) =>{
-    const body = req.body
-    if (!body)
-        return res.status(400).end()
-    banco.push(body)
-        return res.json(body)
-})
-//deletar arquivos por id
-routes.delete('/deletar/:id', (req, res) =>{
-    const id = req.params.id
-    let nBanco = banco.filter(item =>{
-        if(!item[id])
-            return item
-    })
-    banco = nBanco
-    return res.send(nBanco)
-})
-
-//buscar informação por id
-routes.get('/buscar/:id', (req, res) =>{
-    const id = req.params.id
-    let dbanco = banco.filter(item =>{
-        if(!item[id])
-            return item
-    })
-    banco = dbanco
-    return res.json(dbanco)
-})
 
 async function contacaoDolar(req, res){
     const dataAtualCotacao = new Date();
